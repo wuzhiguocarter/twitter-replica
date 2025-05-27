@@ -1,4 +1,4 @@
-import { TweetType, TrendType, SuggestionType, NotificationType } from '../types';
+import { TweetType, TrendType, SuggestionType, NotificationType, MessageType, ConversationType } from '../types';
 
 // Mock tweets
 export const mockTweets: TweetType[] = [
@@ -192,5 +192,175 @@ export const mockNotifications: NotificationType[] = [
       avatar: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     tweet: mockTweets[3]
+  }
+];
+
+// Mock messages
+export const mockMessages: MessageType[] = [
+  {
+    id: '1',
+    content: 'Hey, how are you doing?',
+    timestamp: '2025-04-10T15:30:00.000Z',
+    isRead: true,
+    isSent: false
+  },
+  {
+    id: '2',
+    content: 'I\'m good, thanks! Working on some new projects. How about you?',
+    timestamp: '2025-04-10T15:32:00.000Z',
+    isRead: true,
+    isSent: true
+  },
+  {
+    id: '3',
+    content: 'That sounds exciting! I\'m just preparing for our upcoming conference next week.',
+    timestamp: '2025-04-10T15:35:00.000Z',
+    isRead: true,
+    isSent: false
+  },
+  {
+    id: '4',
+    content: 'Would you like to meet up for coffee sometime to discuss potential collaborations?',
+    timestamp: '2025-04-10T15:40:00.000Z',
+    isRead: true,
+    isSent: false
+  },
+  {
+    id: '5',
+    content: 'That sounds great! How about Friday afternoon?',
+    timestamp: '2025-04-10T15:45:00.000Z',
+    isRead: true,
+    isSent: true
+  },
+  {
+    id: '6',
+    content: 'Perfect! Let\'s meet at the usual place at 3 PM.',
+    timestamp: '2025-04-10T15:50:00.000Z',
+    isRead: false,
+    isSent: false
+  }
+];
+
+// Mock conversations
+export const mockConversations: ConversationType[] = [
+  {
+    id: '1',
+    participant: {
+      name: 'Elon Musk',
+      handle: '@elonmusk',
+      avatar: 'https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    messages: mockMessages,
+    lastMessageTimestamp: '2025-04-10T15:50:00.000Z',
+    unreadCount: 1,
+    isActive: true
+  },
+  {
+    id: '2',
+    participant: {
+      name: 'Bill Gates',
+      handle: '@BillGates',
+      avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    messages: [
+      {
+        id: '7',
+        content: 'Have you seen the latest AI research paper?',
+        timestamp: '2025-04-09T14:20:00.000Z',
+        isRead: true,
+        isSent: false
+      },
+      {
+        id: '8',
+        content: 'Yes, it\'s fascinating! The progress in generative models is incredible.',
+        timestamp: '2025-04-09T14:25:00.000Z',
+        isRead: true,
+        isSent: true
+      }
+    ],
+    lastMessageTimestamp: '2025-04-09T14:25:00.000Z',
+    unreadCount: 0,
+    isActive: false
+  },
+  {
+    id: '3',
+    participant: {
+      name: 'NASA',
+      handle: '@NASA',
+      avatar: 'https://images.pexels.com/photos/41162/moon-landing-apollo-11-nasa-buzz-aldrin-41162.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    messages: [
+      {
+        id: '9',
+        content: 'We\'d like to invite you to our upcoming space tech exhibition!',
+        timestamp: '2025-04-08T10:15:00.000Z',
+        isRead: true,
+        isSent: false
+      }
+    ],
+    lastMessageTimestamp: '2025-04-08T10:15:00.000Z',
+    unreadCount: 0,
+    isActive: false
+  },
+  {
+    id: '4',
+    participant: {
+      name: 'Taylor Swift',
+      handle: '@taylorswift13',
+      avatar: 'https://images.pexels.com/photos/1644888/pexels-photo-1644888.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    messages: [
+      {
+        id: '10',
+        content: 'Thanks for the support on my new album!',
+        timestamp: '2025-04-07T18:30:00.000Z',
+        isRead: true,
+        isSent: false
+      },
+      {
+        id: '11',
+        content: 'It\'s amazing! I\'ve been listening to it on repeat.',
+        timestamp: '2025-04-07T18:35:00.000Z',
+        isRead: true,
+        isSent: true
+      },
+      {
+        id: '12',
+        content: 'That means a lot! Would you like VIP tickets to my next concert?',
+        timestamp: '2025-04-07T18:40:00.000Z',
+        isRead: false,
+        isSent: false
+      }
+    ],
+    lastMessageTimestamp: '2025-04-07T18:40:00.000Z',
+    unreadCount: 1,
+    isActive: false
+  },
+  {
+    id: '5',
+    participant: {
+      name: 'React',
+      handle: '@reactjs',
+      avatar: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=300'
+    },
+    messages: [
+      {
+        id: '13',
+        content: 'We\'ve just released React 19 with significant performance improvements!',
+        timestamp: '2025-04-06T09:10:00.000Z',
+        isRead: true,
+        isSent: false
+      },
+      {
+        id: '14',
+        content: 'That\'s great news! I\'ll update my projects right away.',
+        timestamp: '2025-04-06T09:15:00.000Z',
+        isRead: true,
+        isSent: true
+      }
+    ],
+    lastMessageTimestamp: '2025-04-06T09:15:00.000Z',
+    unreadCount: 0,
+    isActive: false
   }
 ];

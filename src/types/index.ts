@@ -41,3 +41,21 @@ export interface NotificationType {
   actor: Author;
   tweet?: TweetType;
 }
+
+// Message types
+export interface MessageType {
+  id: string;
+  content: string;
+  timestamp: string;
+  isRead: boolean;
+  isSent: boolean;
+}
+
+export interface ConversationType {
+  id: string;
+  participant: Author;
+  messages: MessageType[];
+  lastMessageTimestamp: string;
+  unreadCount: number;
+  isActive: boolean;
+}
