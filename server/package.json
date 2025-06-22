@@ -1,0 +1,40 @@
+{
+  "name": "twitter-clone-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend server for Twitter clone application",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node --esm src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.1",
+    "bcryptjs": "^2.4.3",
+    "express-validator": "^7.0.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
+    "@types/cors": "^2.8.13",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/morgan": "^1.9.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
